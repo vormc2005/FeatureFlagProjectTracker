@@ -17,7 +17,7 @@ namespace Application.FeatureFlagsTracker
                 _context = context;                
             }
             public async Task<List<ProjectFeatureFlag>> Handle(Query request, CancellationToken cancellationToken)
-            {
+            {                
                 return await _context.ProjectFeatureFlags.ToListAsync();
             }
         }
